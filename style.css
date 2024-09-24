@@ -1,0 +1,28 @@
+*{
+    background-color: black;
+}
+nav{
+    display:flex;
+    justify-content: space-around;
+    border: 1px solid white;    
+}
+nav .logo_ham{
+    display: flex;
+}
+nav .search_bar{
+    display: flex;
+}
+nav .profile{
+    display: flex;
+}
+
+aside div{
+    color: white;
+}
+aside{
+    border: 1px solid white;
+    width: 150px;
+    height: 500px;
+    padding: 10px 2%;
+    box-shadow: 0 0 10px rgb(121, 121, 121);
+}
