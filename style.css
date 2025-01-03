@@ -1,28 +1,120 @@
-*{
-    background-color: black;
-}
-nav{
-    display:flex;
-    justify-content: space-around;
-    border: 1px solid white;    
-}
-nav .logo_ham{
-    display: flex;
-}
-nav .search_bar{
-    display: flex;
-}
-nav .profile{
-    display: flex;
+
+/* Global Styles */
+* {
+  background-color: black;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-aside div{
-    color: white;
+body {
+  font-family: Arial, sans-serif;
 }
-aside{
-    border: 1px solid white;
-    width: 150px;
-    height: 500px;
-    padding: 10px 2%;
-    box-shadow: 0 0 10px rgb(121, 121, 121);
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border: 1px solid white;
+  flex-wrap: wrap;
+}
+
+nav .logo_ham {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+nav .search_bar {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex: 1; /* Take available space for search bar */
+  max-width: 500px;
+}
+
+nav .search_bar input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid white;
+  border-radius: 2px;
+  color: black;
+}
+
+nav .profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+nav img {
+  max-width: 24px;
+  height: auto;
+}
+
+/* Sidebar (Aside) */
+aside {
+  border: 1px solid white;
+  width: 200px;
+  height: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgb(121, 121, 121);
+}
+
+aside div {
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+aside img {
+  max-width: 24px;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Navbar */
+  nav {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 10px;
+  }
+
+  nav .search_bar {
+      margin: 10px 0;
+  }
+
+  /* Sidebar */
+  aside {
+      width: 100%;
+      height: auto;
+      padding: 10px;
+      box-shadow: none;
+  }
+
+  aside div {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Navbar */
+  nav .logo_ham img {
+      max-width: 20px;
+  }
+
+  nav .profile img {
+      max-width: 20px;
+  }
+
+  /* Sidebar */
+  aside {
+      display: none; /* Hide sidebar on smaller devices */
+  }
 }
